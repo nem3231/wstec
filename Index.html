@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WS Tecnologia</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background: white;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px;
+    }
+    header img {
+      height: 120px;
+      margin-bottom: 20px;
+    }
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    nav a:hover {
+      color: #ff6600;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .menu-toggle span {
+      background: #333;
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+      border-radius: 5px;
+    }
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 15px;
+      }
+      nav.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    .hero {
+      background: none;
+      color: #333;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .section {
+      margin-bottom: 50px;
+    }
+    h2 {
+      color: #ff6600;
+      margin-bottom: 20px;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .downloads ul {
+      list-style: none;
+      padding: 0;
+    }
+    .LinksUteis ul {
+      list-style: none;
+      padding: 0;  
+    }
+    .LinksUteis a {
+      text-decoration: none;
+      color: #ff6600;
+      font-weight: bold;  
+    } 
+    .downloads li {
+      background: #f0f0f0;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .LinksUteis li {
+      background: #f0f0f0;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;  
+    }
+    .downloads a {
+      text-decoration: none;
+      color: #ff6600;
+      font-weight: bold;
+    }
+
+    /* Botão WhatsApp fixo */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      text-decoration: none;
+      font-size: 28px;
+      z-index: 1000;
+    }
+    .whatsapp-btn:hover {
+      background-color: #20b954;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo/wsl.png" alt="Logo WS Tecnologia">
+    <div class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#downloads">Downloads</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Bem-vindo à WS Tecnologia</h1>
+    <p>Soluções completas em informática para você e sua empresa.</p>
+  </section>
+
+  <div class="container">
+    <div id="sobre" class="section">
+      <h2>Sobre Nós</h2>
+      <p>A WS Tecnologia é uma empresa dedicada a oferecer soluções modernas e confiáveis em informática para pessoas e empresas. Nosso compromisso é garantir que cada cliente tenha acesso a serviços de qualidade, que vão desde a manutenção de computadores e notebooks até a instalação de redes, câmeras de segurança e sistemas de gestão. Valorizamos a inovação, a confiança e o atendimento próximo, sempre buscando entender as necessidades específicas de cada cliente para entregar resultados que realmente façam a diferença no dia a dia. Nossa missão é simplificar a tecnologia e torná-la uma aliada no crescimento e sucesso dos nossos clientes.</p>
+    </div>
+
+    <div id="servicos" class="section">
+      <h2>Serviços</h2>
+      <ul>
+        <li>✅ Manutenção de computadores e notebooks</li>
+        <li>✅ Troca de telas e manutenção de celulares</li>
+        <li>✅ Venda de toners, acessórios e eletrônicos</li>
+        <li>✅ Instalação cabeamento estruturado</li>
+        <li>✅ Instalação câmeras de segurança</li>
+        <li>✅ Sistema PDV (não fiscal) para seu negócio</li>
+        <li>✅ Instalação Configuração roteadores profisionais</li>
+      </ul>
+    </div>
+
+    <div id="downloads" class="section downloads">
+      <h2>Downloads</h2>
+      <ul>
+        <li>
+          <span>Programa de Acesso Remoto</span>
+          <a href="https://anydesk.com/en/downloads/windows">Baixar</a>
+        </li>
+        <li>
+          <span>App Tv Gratis</span>
+          <a href="https://drive.google.com/drive/folders/1xPadoEtmqvwQYaJc7WpeEHAm36ZOmd3i?usp=sharing">Baixar</a>
+        </li>
+        <li>
+          <span>Adicionar Algo</span>
+          <a href="">Baixar</a>
+          <li>
+          <span>Ativadores</span>
+          <a href="https://drive.google.com/drive/folders/1b-AQuFhikQr2kmJpsRhNay3_gKqA4iCz?usp=sharing">Baixar</a>
+          </li>
+          <li>
+            <span>Winrar 32/64Bits</span>
+            <a href="https://drive.google.com/drive/folders/1xnWGpRYZpEsCnWm5VOCFRpaR1TE9s3XR?usp=sharing">Baixar</a>
+          </li>
+          <li>
+            <span>Java 32/64Bits</span>
+            <a href="https://drive.google.com/drive/folders/12VG7MrcQ6GKHZubsFQiOdQ3-6SWyk9v5?usp=sharing">Baixar</a>
+          </li>
+          <li>
+            <span>Sofware e Driver</span>
+            <a href="https://drive.google.com/drive/folders/1WYZPIRs48aVupEWLKy8jycCvSFsARs8_?usp=sharing">Baixar</a>
+         </li>
+         <li>
+          <span>Gerador de senha</span>
+          <a href="https://geradorwstec.netlify.app/">Acessar</a>
+         </li>
+
+          <li>
+          <span>Visualizador PDF</span>
+          <a href="https://get.adobe.com/br/reader/">Baixar</a>
+          </li>
+
+          <div id="LinksUteis" class="selection Links Uteis"> </div>
+          <li><h2>LinksUteis</h2></li>
+          <li>
+          <span>Visualizador PDF</span>
+          <a href="https://get.adobe.com/br/reader/">Acessar</a>
+          </li>
+          <li>
+              <span>Converso Documentos</span>
+            <a href="https://www.ilovepdf.com/pt">Acessar</a>
+          </li>
+        </li>
+
+        <li>
+          
+          <span>Utilitário de Limpeza</span>
+          <a href="#">Baixar</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="contato" class="section">
+      <h2>Contato</h2>
+      <p>📍 Rua Santos Souza, Nº 31</p>
+      <p>📞 (33) 99817-9431</p>
+      <p>📧 contato@wstecnologia.com</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 WS Tecnologia - Todos os direitos reservados</p>
+  </footer>
+
+  <!-- Botão WhatsApp -->
+  <a href="https://wa.me/5533998179431" target="_blank" class="whatsapp-btn">💬</a>
+
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      document.querySelector('nav').classList.toggle('active');
+    });
+  </script>
+  <!--Desenvolvido por walisson gomes santana Ceo Ws Tecnologia-->
+</body>
+</html>
